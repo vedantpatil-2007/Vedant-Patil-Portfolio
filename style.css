@@ -215,18 +215,22 @@ body{
 .hero-image{
 
     width:380px;
-
     height:380px;
 
-    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
+    border-radius:50%;
     overflow:hidden;
 
     border:5px solid #38bdf8;
 
     box-shadow:0 0 40px rgba(56,189,248,.4);
 
+    flex-shrink:0;
 }
+
 
 .hero-image img{
 
@@ -238,7 +242,6 @@ body{
 
     object-position:center 40%;
     
-    object-position:right 40%;
 
 }
 /* Social Icons */
@@ -1847,5 +1850,70 @@ footer{
 
     .resume-btn{
         display: none;
+    }
+}
+@media (max-width: 768px) {
+
+    .hero{
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    gap:35px;
+
+    padding:110px 20px 60px;
+}
+
+    .hero-text{
+
+    width:100%;
+
+}
+    .hero-image{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-image img{
+
+    width:260px;
+    height:260px;
+
+    object-fit:cover;
+
+    object-position:center 35%;
+
+    border-radius:50%;
+}
+
+    .buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+    .skills-grid,
+    .projects-grid,
+    .certificates-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+    .footer{
+        text-align:center;
     }
 }
